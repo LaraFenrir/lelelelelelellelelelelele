@@ -1,0 +1,23 @@
+{
+  "name": "bot2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "dependencies": {
+    "cuteapi": "0.0.3",
+    "discord.js": "^11.3.2",
+    "ffmpeg-binaries": "^3.2.2-3",
+    "fs.js": "0.0.1",
+    "lowdb": "^1.0.0",
+    "opusscript": "^0.0.6",
+    "snekfetch": "^4.0.4",
+    "superagent": "^4.0.0",
+    "ytdl-core": "^0.18.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
