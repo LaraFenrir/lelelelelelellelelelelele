@@ -539,7 +539,7 @@ if(!message.guild.member(message.author).hasPermission("MANAGE_GUILD")) return m
     var args = message.content.substring(prefix.length).split(" ");
  if (message.content === prefix + "ping") {
      var startTime = Date.now();
-  message.channel.send("Calcul en cours...").then((message) => {
+  msg.channel.sendMessage("Calcul en cours...").then((message) => {
    var endTime = Date.now();
      message.edit("Bot : " + Math.round(endTime - startTime) + " ms\nAPI : "+Math.round(bot.ping)+" ms");
     })
