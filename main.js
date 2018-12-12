@@ -53,6 +53,17 @@ bot.on("guildMemberRemove", member => {
 
         db.get("xp").find({user: msgauthor}).assign({user: msgauthor, xp: userxp[1] += 1}).write();
     }
+      
+ if(message.content === prefix + 'dev')
+  
+  var dev = new Discord.RichEmbed()
+  .setTitle(`Salut à toi, ${message.author.username}`)
+  .addField("Si tu lis ceci c'est pour en savoir plus sur ma développeuse. Je vais tout te dire.", "Son pseudo discord est ℒ𝓪𝓻𝓪 ℱ𝒆𝓷𝓻𝓲𝓻#1084. Elle est développeuse depuis longtemps déjà. Elle as déjà créée (avant de me créer moi) un bot musique, qui dois sans doutes être présent actuellement sur le serveur ou tu te situe (dans le cas contraire, désolée :/) essaie donc de faire '+help music' tu verras !")
+  .addField("Que dire de plus..", "Ah si ! Elle te remercie de m'avoir ajoutée sur ce serveur ! Car même si elle n'est pas co, je sauvegarde toutes intéractions avec moi même ou les autres bots de Lara, ce qui fait qu'elle les voies. Donc, merci ! ❤")
+  .setImage('https://cdn.discordapp.com/attachments/511554588738846720/522212606577082370/1312931744.jpg')
+  .setThumbnail("https://cdn.discordapp.com/attachments/511554588738846720/522212793299238923/nekoGirl_1.jpg")
+
+  message.channel.send({embed: dev})
 
     if(message.content === prefix + "serveur")
         var serverinfo = new Discord.RichEmbed()
@@ -223,7 +234,7 @@ bot.on("guildMemberRemove", member => {
     .setDescription("Menu d'aide")
     .setImage("https://cdn.discordapp.com/attachments/508105906261721108/510264359541538826/hyperdimension-neptunia-victory-1.jpg")
     .setThumbnail("https://cdn.discordapp.com/attachments/508105906261721108/510264225180942346/5788f566eafcef6b0d2eafb9ca3a59b5650fec1c_hq.jpg")
-    .addField("Tout marche avec le préfixe r!", "help: Affiche ce menu\nui: Permet d'avoir des infos sur un utilisateur.\nroll: Fait tourner une pièce.\nxpstat: Pour savoir l'xp accumulée sur le serv (nombres de messages)\nchat: Vous affiche aléatoirement l'image d'un piti chat\nchien: Vous affiche aléatoirement l'image d'un piti chien\nmeme: G3T M3M3D\nfiche: Modèle de fiche\npurge : Pour delet les messages(staffs uniquement\n(Staff only)warn @mention raison: Permet de warn un utilisateur.\nseewarns @mention: Voir les warns d'un utilisateur.\n(Staff only)deletewarns @mention numéro du warn (Utiliser seewarns): Pour delet un warn.")
+    .addField("Tout marche avec le préfixe r!", "help: Affiche ce menu\nui: Permet d'avoir des infos sur un utilisateur.\ndev: Infos sur ma développeuse d'amour ❤\nroll: Fait tourner une pièce.\nxpstat: Pour savoir l'xp accumulée sur le serv (nombres de messages)\nchat: Vous affiche aléatoirement l'image d'un piti chat\nchien: Vous affiche aléatoirement l'image d'un piti chien\nmeme: G3T M3M3D\nfiche: Modèle de fiche\npurge : Pour delet les messages(staffs uniquement\n(Staff only)warn @mention raison: Permet de warn un utilisateur.\nseewarns @mention: Voir les warns d'un utilisateur.\n(Staff only)deletewarns @mention numéro du warn (Utiliser seewarns): Pour delet un warn.")
     .setFooter("D'autre commandes arrivent mon petit.. C'est que le début.")
 
     
