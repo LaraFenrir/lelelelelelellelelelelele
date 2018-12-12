@@ -229,9 +229,9 @@ bot.on("guildMemberRemove", member => {
 
    if (message.content === prefix + "help") {
     var help = new Discord.RichEmbed()
-    .setTitle("Lara Fenrir")
+    .setTitle(`Salut à toi ${message.author.username} !`)
     .setColor("#120D16")
-    .setDescription("Menu d'aide")
+    .setDescription("Voici le menu d'aide !")
     .setImage("https://cdn.discordapp.com/attachments/508105906261721108/510264359541538826/hyperdimension-neptunia-victory-1.jpg")
     .setThumbnail("https://cdn.discordapp.com/attachments/508105906261721108/510264225180942346/5788f566eafcef6b0d2eafb9ca3a59b5650fec1c_hq.jpg")
     .addField("Tout marche avec le préfixe r!", "help: Affiche ce menu\nui: Permet d'avoir des infos sur un utilisateur.\ndev: Infos sur ma développeuse d'amour ❤\nroll: Fait tourner une pièce.\nxpstat: Pour savoir l'xp accumulée sur le serv (nombres de messages)\nchat: Vous affiche aléatoirement l'image d'un piti chat\nchien: Vous affiche aléatoirement l'image d'un piti chien\nmeme: G3T M3M3D\nfiche: Modèle de fiche\npurge : Pour delet les messages(staffs uniquement\n(Staff only)warn @mention raison: Permet de warn un utilisateur.\nseewarns @mention: Voir les warns d'un utilisateur.\n(Staff only)deletewarns @mention numéro du warn (Utiliser seewarns): Pour delet un warn.")
