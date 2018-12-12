@@ -53,7 +53,16 @@ bot.on("guildMemberRemove", member => {
 
         db.get("xp").find({user: msgauthor}).assign({user: msgauthor, xp: userxp[1] += 1}).write();
     }
+if (msg.content === prefix + "ping") {
+     var startTime = Date.now();
+  msg.channel.sendMessage("Calcul en cours...").then((message) => {
+   var endTime = Date.now();
+     message.edit("Bot : " + Math.round(endTime - startTime) + " ms\nAPI : "+Math.round(bot.ping)+" ms");
+    })
+}
       
+      
+     
  if(message.content === prefix + 'dev')
   
   var dev = new Discord.RichEmbed()
@@ -234,7 +243,7 @@ bot.on("guildMemberRemove", member => {
     .setDescription("Voici le menu d'aide !")
     .setImage("https://cdn.discordapp.com/attachments/508105906261721108/510264359541538826/hyperdimension-neptunia-victory-1.jpg")
     .setThumbnail("https://cdn.discordapp.com/attachments/508105906261721108/510264225180942346/5788f566eafcef6b0d2eafb9ca3a59b5650fec1c_hq.jpg")
-    .addField("Tout marche avec le préfixe r!", "help: Affiche ce menu\nui: Permet d'avoir des infos sur un utilisateur.\ndev: Infos sur ma développeuse d'amour ❤\nroll: Fait tourner une pièce.\nxpstat: Pour savoir l'xp accumulée sur le serv (nombres de messages)\nchat: Vous affiche aléatoirement l'image d'un piti chat\nchien: Vous affiche aléatoirement l'image d'un piti chien\nmeme: G3T M3M3D\nfiche: Modèle de fiche\npurge : Pour delet les messages(staffs uniquement\n(Staff only)warn @mention raison: Permet de warn un utilisateur.\nseewarns @mention: Voir les warns d'un utilisateur.\n(Staff only)deletewarns @mention numéro du warn (Utiliser seewarns): Pour delet un warn.")
+    .addField("Tout marche avec le préfixe r!", "help: Affiche ce menu\nping : Permet de voir si je lag.. (Si je lag, faut taper ma développeuse, c'est sa faute !\nui: Permet d'avoir des infos sur un utilisateur.\ndev: Infos sur ma développeuse d'amour ❤\nroll: Fait tourner une pièce.\nxpstat: Pour savoir l'xp accumulée sur le serv (nombres de messages)\nchat: Vous affiche aléatoirement l'image d'un piti chat\nchien: Vous affiche aléatoirement l'image d'un piti chien\nmeme: G3T M3M3D\nfiche: Modèle de fiche\npurge : Pour delet les messages(staffs uniquement\n(Staff only)warn @mention raison: Permet de warn un utilisateur.\nseewarns @mention: Voir les warns d'un utilisateur.\n(Staff only)deletewarns @mention numéro du warn (Utiliser seewarns): Pour delet un warn.")
     .setFooter("D'autre commandes arrivent mon petit.. C'est que le début.")
 
     
