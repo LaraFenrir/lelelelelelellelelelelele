@@ -53,13 +53,6 @@ bot.on("guildMemberRemove", member => {
 
         db.get("xp").find({user: msgauthor}).assign({user: msgauthor, xp: userxp[1] += 1}).write();
     }
-if (msg.content === prefix + "ping") {
-     var startTime = Date.now();
-  msg.channel.sendMessage("Calcul en cours...").then((message) => {
-   var endTime = Date.now();
-     message.edit("Bot : " + Math.round(endTime - startTime) + " ms\nAPI : "+Math.round(bot.ping)+" ms");
-    })
-}
       
       
      
@@ -544,7 +537,16 @@ if(!message.guild.member(message.author).hasPermission("MANAGE_GUILD")) return m
   }
     if (!message.content.startsWith(prefix)) return;
     var args = message.content.substring(prefix.length).split(" ");
-    
+ if (message.content === prefix + "ping") {
+     var startTime = Date.now();
+  msg.channel.sendMessage("Calcul en cours...").then((message) => {
+   var endTime = Date.now();
+     message.edit("Bot : " + Math.round(endTime - startTime) + " ms\nAPI : "+Math.round(bot.ping)+" ms");
+    })
+}   
+      
+      
+      
     switch (args[0].toLowerCase()){
 
         case "newstory":
