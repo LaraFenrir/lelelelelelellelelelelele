@@ -222,7 +222,7 @@ bot.on("guildMemberRemove", member => {
 
        if(!args[0]) return message.channel.send("Précise moi un nombre de messages.")
        message.channel.bulkDelete(args[0]).then(() => {
-           message.channel.send(`${args[0]} messages on étés supprimés.`)
+           message.channel.send(`${args[0]} messages ont été supprimés.`)
        }
     )
    }
