@@ -54,9 +54,6 @@ bot.on("guildMemberRemove", member => {
         db.get("xp").find({user: msgauthor}).assign({user: msgauthor, xp: userxp[1] += 1}).write();
     }
       
- if (message.content == prefix + "tip")
-   message.channel.send("Tu veux me soutenir ? m'aider dans mes projets ? Ou tout simplement me faire plaisir ? Si tu en as les moyens uniquement, passe sur mon tipee ! : https://en.tipeee.com/larafenrir ")
-     
  if(message.content === prefix + 'dev')
   
   var dev = new Discord.RichEmbed()
@@ -117,7 +114,9 @@ bot.on("guildMemberRemove", member => {
         msg.delete()
     }
 
-
+    if (message.content === prefix + "tip")
+        message.channel.send("Tu veux me soutenir ? m'aider dans mes projets ? Ou tout simplement me faire plaisir ? Si tu en as les moyens uniquement, passe sur mon tipee ! : https://en.tipeee.com/larafenrir ")
+     
 
     if(message.content === prefix + "meme") {
       let msg = await message.channel.send("En cours...")
