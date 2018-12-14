@@ -38,7 +38,7 @@ bot.on("guildMemberRemove", member => {
  
     bot.on('message', async message => {
     
-    var msgauthor = message.author.tag;
+    var msgauthor = message.author.id;
 
     if(message.author.bot)return;
 
