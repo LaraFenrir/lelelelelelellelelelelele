@@ -17,7 +17,7 @@ var storynumber = db.get('histoires').map('story_value').value();
 var dispatcher;
 var token = process.env.TOKEN
 bot.on('ready', () => {
-  bot.user.setActivity("Être dev par ℒ𝓪𝓻𝓪 ℱ𝒆𝓷𝓻𝓲𝓻 [r!help]", {type: "WATCHING", url "https://discord.gg/GM2n5ky"});
+  bot.user.setActivity("Être dev par ℒ𝓪𝓻𝓪 ℱ𝒆𝓷𝓻𝓲𝓻 [r!help]", {type: "WATCHING"});
     console.log('Bot Ready !');
 });
 process.on('unhandledRejection', function(reason, p){
